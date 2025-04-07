@@ -1,4 +1,4 @@
-# MySplashZones
+# MyHotZones
 
 A personal basketball shot tracking application that helps players analyze their performance and improve their game.
 
