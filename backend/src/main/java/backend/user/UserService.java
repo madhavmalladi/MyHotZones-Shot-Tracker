@@ -2,13 +2,20 @@ package backend.user;
 
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
 
+    private final UserRepository userRepository;
+
+    @Autowired
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     public List<User> getUsers() {
-        return List.of(
-                new User(1L, "madhav.malladi25@gmail.com", "Madhav Malladi", "madhav.m_", "password"));
+        return userRepository.findAll();
     }
 }
